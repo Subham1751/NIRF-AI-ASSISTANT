@@ -122,6 +122,6 @@ def engineer_features(input_path: str, output_path: str):
 
 if __name__ == "__main__":
     engineer_features(
-        input_path="data/MasterData.xlsx",
-        output_path="data/nirf_feature_engineered.csv"
+        input_path="data/MasterData_SS.xlsx",
+        output_path="data/SS_feature_engineered.csv"
     )
