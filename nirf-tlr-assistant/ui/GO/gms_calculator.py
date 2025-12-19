@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from helpers.GO.GMS_prompt import build_prompt
+from helpers.GO_prompts.GMS_prompt import build_prompt
 from input_scripts.GO.predict_gms import predict_gms
 
 class GMSCalculatorFrame(ttk.LabelFrame):
