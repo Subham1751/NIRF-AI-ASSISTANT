@@ -129,6 +129,7 @@ def main():
         gms_frame.set_gemini_frame(gemini_frame)
         gui_frame.set_gemini_frame(gemini_frame)
         gphd_frame.set_gemini_frame(gemini_frame)
+        gph_frame.set_gemini_frame(gemini_frame)
         
         # Rebuild score table with GO headers
         rebuild_score_table(["GPH", "GUI", "GMS", "GPHD"])
