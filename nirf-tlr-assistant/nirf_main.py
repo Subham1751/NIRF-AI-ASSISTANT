@@ -11,6 +11,7 @@ from ui.GO.gui_calculator import GUICalculatorFrame
 from ui.GO.gms_calculator import GMSCalculatorFrame
 from ui.GO.gphd_calculator import GPHDCalculatorFrame
 from ui.OI.escs_calculator import ESCSCalculatorFrame
+from ui.RP.fppp_calculator import FPPPCalculatorFrame
 from ui.score_frame_toggle import create_toggle_function, create_score_table_builder
 from ui.geimini_recommendation.gemini_recommendation import GeminiRecommendationFrame
 
@@ -159,6 +160,16 @@ def main():
         
         # Rebuild score table with OI headers
         rebuild_score_table(["RD", "WD", "ESCS"])
+    
+    def load_rp_ui():
+        clear_content_frame()
+        
+        calculator_frames.clear()
+        
+        fppp_frame = FPPPCalculatorFrame(content_frame)
+        fppp_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+        
+        calculator_frames["fppp"] = fppp_frame
         
     button_frame = ttk.Frame(root)
     button_frame.grid(row=0, column=0, columnspan=2, sticky="n")
@@ -166,7 +177,7 @@ def main():
     tlr_button = ttk.Button(button_frame, text="TLR", command=load_tlr_ui)
     go_button = ttk.Button(button_frame, text="GO", command=load_go_ui)
     oi_button = ttk.Button(button_frame, text="OI", command=load_io_ui)
-    rp_button = ttk.Button(button_frame, text="RP", command=lambda: clear_content_frame())
+    rp_button = ttk.Button(button_frame, text="RP", command=load_rp_ui)
     
     tlr_button.pack(side="left", padx=5)
     go_button.pack(side="left", padx=5)
