@@ -171,6 +171,8 @@ def main():
         
         calculator_frames["fppp"] = fppp_frame
         
+        fppp_frame.set_gemini_frame(gemini_frame)
+        
     button_frame = ttk.Frame(root)
     button_frame.grid(row=0, column=0, columnspan=2, sticky="n")
     

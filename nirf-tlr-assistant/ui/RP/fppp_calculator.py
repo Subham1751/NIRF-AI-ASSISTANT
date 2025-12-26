@@ -1,10 +1,15 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from input_scripts.RP.predict_fppp import predict_fppp
+from helpers.RP_prompts.FPPP_prompt import build_prompt
 
 class FPPPCalculatorFrame(ttk.LabelFrame):
+    def set_gemini_frame(self, gemini_frame):
+        self.gemini_frame = gemini_frame
+    
     def __init__(self, parent):
         super().__init__(parent, text="FPPP Calculator", padding=10)
+        self.gemini_frame = None
         
         # Configure 6 columns for consistent layout
         self.grid_columnconfigure(0, weight=1)
@@ -70,7 +75,7 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         self.output_entry.insert(0, "FPPP Score will appear here")
         self.output_entry.config(state="readonly")
         
-        recommend_btn = ttk.Button(self, text="Get FPPP Recommendation")
+        recommend_btn = ttk.Button(self, text="Get FPPP Recommendation", command=self.get_recommendation)
         recommend_btn.grid(row=5, column=3, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
     
     def predict_score(self):
@@ -97,6 +102,48 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         
         except Exception as e:
             messagebox.showerror("Error", f"Invalid input: {e}")
+    
+    def get_recommendation(self):
+        try:
+            spon_amt_24 = float(self.spon_amt_24_23.get())
+            spon_amt_23 = float(self.spon_amt_23_22.get())
+            spon_amt_22 = float(self.spon_amt_22_21.get())
+            
+            consul_amt_24 = float(self.consul_amt_24_23.get())
+            consul_amt_23 = float(self.consul_amt_23_22.get())
+            consul_amt_22 = float(self.consul_amt_22_21.get())
+            
+            total_fac = int(self.tot_fac.get())
+        
+        except ValueError:
+            messagebox.showerror("Input Error", "Enter valid numbers.")
+            return
+        
+        if not self.gemini_frame:
+            messagebox.showerror("Gemini Error", "Gemini frame not connected.")
+            return
+        
+        fppp_score_text = self.output_entry.get().strip()
+        try:
+            fppp_score = float(fppp_score_text)
+        except ValueError:
+            messagebox.showerror("Error", "Please predict FPPP Score first.")
+            return
+        
+        values = {
+            "spon_amt_24": spon_amt_24,
+            "spon_amt_23": spon_amt_23,
+            "spon_amt_22": spon_amt_22,
+            "consul_amt_24": consul_amt_24,
+            "consul_amt_23": consul_amt_23,
+            "consul_amt_22": consul_amt_22,
+            "total_faculty": total_fac,
+            "fppp_score": fppp_score
+        }
+        
+        prompt = build_prompt(values)
+        self.gemini_frame.generate_recommendation(prompt)
+            
     
     def clear_fields(self):
         self.spon_amt_24_23.delete(0, tk.END)
