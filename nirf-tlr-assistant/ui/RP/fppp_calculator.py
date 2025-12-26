@@ -62,7 +62,7 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         
         # Row 4: Buttons
         predict_btn = ttk.Button(self, text="Predict FPPP", command=self.predict_score)
-        clear_btn = ttk.Button(self, text="Clear")
+        clear_btn = ttk.Button(self, text="Clear", command=self.clear_fields)
         
         clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=2, pady=5)
         predict_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=2, pady=5)
