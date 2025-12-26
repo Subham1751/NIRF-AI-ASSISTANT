@@ -173,6 +173,9 @@ def main():
         
         fppp_frame.set_gemini_frame(gemini_frame)
         
+        # Rebuild score tables with RP headers
+        rebuild_score_table(["FPPP", "IPR", "QP", "PU"])
+        
     button_frame = ttk.Frame(root)
     button_frame.grid(row=0, column=0, columnspan=2, sticky="n")
     
