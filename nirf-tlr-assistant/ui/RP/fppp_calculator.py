@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+from input_scripts.RP.predict_fppp import predict_fppp
 
 class FPPPCalculatorFrame(ttk.LabelFrame):
     def __init__(self, parent):
@@ -55,7 +56,7 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         self.consul_amt_22_21.grid(row=3, column=1, pady=5, sticky="ew", padx=2)
         
         # Row 4: Buttons
-        predict_btn = ttk.Button(self, text="Predict FPPP")
+        predict_btn = ttk.Button(self, text="Predict FPPP", command=self.predict_score)
         clear_btn = ttk.Button(self, text="Clear")
         
         clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=2, pady=5)
@@ -71,3 +72,39 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         
         recommend_btn = ttk.Button(self, text="Get FPPP Recommendation")
         recommend_btn.grid(row=5, column=3, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
+    
+    def predict_score(self):
+        try:
+            spon_amt_24 = float(self.spon_amt_24_23.get())
+            spon_amt_23 = float(self.spon_amt_23_22.get())
+            spon_amt_22 = float(self.spon_amt_22_21.get())
+            
+            consul_amt_24 = float(self.consul_amt_24_23.get())
+            consul_amt_23 = float(self.consul_amt_23_22.get())
+            consul_amt_22 = float(self.consul_amt_22_21.get())
+            
+            total_fac = int(self.tot_fac.get())
+            
+            fppp_score = predict_fppp(
+                spon_amt_24, spon_amt_23, spon_amt_22, consul_amt_24,
+                consul_amt_23, consul_amt_22, total_fac
+            )
+            
+            self.output_entry.config(state="normal")
+            self.output_entry.delete(0, tk.END)
+            self.output_entry.insert(0, f"{fppp_score}")
+            self.output_entry.config(state="readonly")
+        
+        except Exception as e:
+            messagebox.showerror("Error", f"Invalid input: {e}")
+    
+    def clear_fields(self):
+        self.spon_amt_24_23.delete(0, tk.END)
+        self.spon_amt_23_22.delete(0, tk.END)
+        self.spon_amt_22_21.delete(0, tk.END)
+        self.consul_amt_24_23.delete(0, tk.END)
+        self.consul_amt_23_22.delete(0, tk.END)
+        self.consul_amt_22_21.delete(0, tk.END)
+        self.tot_fac.delete(0, tk.END)
+        self.output_entry.delete(0, tk.END)
+            
