@@ -1,18 +1,24 @@
 import tkinter as tk
 from tkinter import ttk
+
 from ui.OI.rd_calculator import RDCalculatorFrame
 from ui.OI.wd_calculator import WDCalculatorFrame
+from ui.OI.escs_calculator import ESCSCalculatorFrame
+
 from ui.TLR.ss_calculator import SSCalculatorFrame
 from ui.TLR.fsr_calculator import FSRCalculatorFrame
 from ui.TLR.fqe_calculator import FQECalculatorFrame
 from ui.TLR.fru_calculator import FRUCalculatorFrame
+
 from ui.GO.gph_calculator import GPHCalculatorFrame
 from ui.GO.gui_calculator import GUICalculatorFrame
 from ui.GO.gms_calculator import GMSCalculatorFrame
 from ui.GO.gphd_calculator import GPHDCalculatorFrame
-from ui.OI.escs_calculator import ESCSCalculatorFrame
+
 from ui.RP.fppp_calculator import FPPPCalculatorFrame
 from ui.RP.pu_calculator import PUCalculatorFrame
+from ui.RP.qp_calculator import QPCalculatorFrame
+
 from ui.score_frame_toggle import create_toggle_function, create_score_table_builder
 from ui.geimini_recommendation.gemini_recommendation import GeminiRecommendationFrame
 
@@ -173,8 +179,12 @@ def main():
         pu_frame = PUCalculatorFrame(content_frame)
         pu_frame.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
         
+        qp_frame = QPCalculatorFrame(content_frame)
+        qp_frame.grid(row=1, column=0, sticky="ew", padx=2, pady=5)
+        
         calculator_frames["fppp"] = fppp_frame
         calculator_frames["pu"] = pu_frame
+        calculator_frames["qp"] = qp_frame
         
         fppp_frame.set_gemini_frame(gemini_frame)
         
