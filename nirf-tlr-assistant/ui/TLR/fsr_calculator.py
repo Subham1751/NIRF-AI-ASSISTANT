@@ -12,6 +12,9 @@ class FSRCalculatorFrame(ttk.LabelFrame):
     def __init__(self, parent):
         super().__init__(parent, text="FSR Calculator", padding=10)
         
+        # Track current UI mode
+        self.current_mode = "default"
+        
         # Configure 2 columns for inputs, but 6 columns for buttons/output
         self.grid_columnconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
@@ -27,29 +30,57 @@ class FSRCalculatorFrame(ttk.LabelFrame):
                        font=("Arial", 10, "bold"),
                        padding=5)
         
-        btn_docs = ttk.Button(self, text="📘 FSR Docs", style="Docs.TButton", command=self.show_docs)
-        btn_docs.grid(row=0, column=0, columnspan=6, sticky="ew")
+        btn_reverse_mode_a = ttk.Button(self, text="Reverse Mode A", style="Docs.TButton", command=self.show_reverse_mode_a)
+        btn_reverse_mode_a.grid(row=0, column=0, sticky="ew", padx=(0, 5))
         
-        ttk.Label(self, text="Total Sanctioned Seats (NT_total): ").grid(row=1, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        btn_docs = ttk.Button(self, text="📘 FSR Docs", style="Docs.TButton", command=self.show_docs)
+        btn_docs.grid(row=0, column=1, columnspan=3, sticky="nsew", padx=(0, 5))
+        
+        btn_reverse_mode_b = ttk.Button(self, text="Reverse Mode B", style="Docs.TButton", command=self.show_reverse_mode_b)
+        btn_reverse_mode_b.grid(row=0, column=4, columnspan=2, sticky="ew", padx=(0, 5))
+        
+        # Initialize default UI
+        self.create_default_ui()
+        
+    def create_default_ui(self):
+        self.default_widgets = []
+            
+        label_nt = ttk.Label(self, text="Total Sanctioned Seats (NT_total): ")
+        label_nt.grid(row=1, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.default_widgets.append(label_nt)
+            
         self.nt_entry = ttk.Entry(self, width=20)
         self.nt_entry.grid(row=1, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.default_widgets.append(self.nt_entry)
         
-        ttk.Label(self, text="Permanen Enrolled PhD Seats (NP_total): ").grid(row=2, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        label_ne = ttk.Label(self, text="Permanent Enrolled PhD Seats (NP_total): ")
+        label_ne.grid(row=2, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.default_widgets.append(label_ne)
+            
         self.ne_entry = ttk.Entry(self, width=20)
         self.ne_entry.grid(row=2, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.default_widgets.append(self.ne_entry)
         
-        ttk.Label(self, text="Total Faculties (F_total): ").grid(row=3, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        label_f = ttk.Label(self, text="Total Faculties (F_total): ")
+        label_f.grid(row=3, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.default_widgets.append(label_f)
+            
         self.f_entry = ttk.Entry(self, width=20)
         self.f_entry.grid(row=3, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.default_widgets.append(self.f_entry)
         
         predict_btn = ttk.Button(self, text="Predict_FSR", command=self.predict_fsr)
-        clear_btn = ttk.Button(self, text="Clear", command=self.clear_fields)
-        
-        clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=10, pady=5)
         predict_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.default_widgets.append(predict_btn)
+        
+        clear_btn = ttk.Button(self, text="Clear", command=self.clear_fields) 
+        clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.default_widgets.append(clear_btn)
+        
         
         self.output_entry = ttk.Entry(self, width=15, font=("Arial", 12, "bold"), state="readonly", foreground="gray")
         self.output_entry.grid(row=5, column=0, columnspan=3, sticky="ew", padx=2)
+        self.default_widgets.append(self.output_entry)
         
         self.output_entry.config(state="normal")
         self.output_entry.insert(0, "FSR Score will appear here")
@@ -57,6 +88,134 @@ class FSRCalculatorFrame(ttk.LabelFrame):
         
         recommend_btn = ttk.Button(self, text="Get FSR Recommendation", command=self.get_fsr_recommendation)
         recommend_btn.grid(row=5, column=3, columnspan=3, sticky="ew", padx=2)
+        self.default_widgets.append(recommend_btn)
+    
+    def create_reverse_mode_a_ui(self):
+        # Store reverse mode widgets for later hiding/showing
+        self.reverse_a_widgets = []
+        
+        label_students = ttk.Label(self, text="Total Students:")
+        label_students.grid(row=1, column=0, columnspan=2, sticky="w", padx=2, pady=5)
+        self.reverse_a_widgets.append(label_students)
+        
+        self.students_entry = ttk.Entry(self, width=20)
+        self.students_entry.grid(row=1, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_a_widgets.append(self.students_entry)
+        
+        label_phd = ttk.Label(self, text="Total PhD students: ")
+        label_phd.grid(row=2, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.reverse_a_widgets.append(label_phd)
+        
+        self.phd_entry = ttk.Entry(self, width=20)
+        self.phd_entry.grid(row=2, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_a_widgets.append(self.phd_entry)
+        
+        label_target = ttk.Label(self, text="Target Score: ")
+        label_target.grid(row=3, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.reverse_a_widgets.append(label_target)
+            
+        self.target_entry = ttk.Entry(self, width=20)
+        self.target_entry.grid(row=3, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_a_widgets.append(self.target_entry)
+        
+        fsr_docs_btn = ttk.Button(self, text="Predict_FSR_Docs")
+        fsr_docs_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.reverse_a_widgets.append(fsr_docs_btn)
+        
+        clear_btn = ttk.Button(self, text="Clear", command=self.clear_reverse_mode_a) 
+        clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.reverse_a_widgets.append(clear_btn)
+        
+        cancel_btn = ttk.Button(self, text="Back to default UI", command=self.show_default_mode)
+        cancel_btn.grid(row=5, column=0, columnspan=6, sticky="nsew", padx=10, pady=5)
+        self.reverse_a_widgets.append(cancel_btn)
+    
+    def create_reverse_mode_b_ui(self):
+        # Store reverse mode widgets for later hiding/showing
+        self.reverse_b_widgets = []
+        
+        label_faculty = ttk.Label(self, text="Total Faculty:")
+        label_faculty.grid(row=1, column=0, columnspan=2, sticky="w", padx=2, pady=5)
+        self.reverse_b_widgets.append(label_faculty)
+        
+        self.faculty_entry = ttk.Entry(self, width=20)
+        self.faculty_entry.grid(row=1, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_b_widgets.append(self.faculty_entry)
+        
+        label_phd = ttk.Label(self, text="Total PhD students: ")
+        label_phd.grid(row=2, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.reverse_b_widgets.append(label_phd)
+        
+        self.phd_entry = ttk.Entry(self, width=20)
+        self.phd_entry.grid(row=2, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_b_widgets.append(self.phd_entry)
+        
+        label_target = ttk.Label(self, text="Target Score: ")
+        label_target.grid(row=3, column=0, columnspan=2, sticky="w", pady=5, padx=2)
+        self.reverse_b_widgets.append(label_target)
+            
+        self.target_entry = ttk.Entry(self, width=20)
+        self.target_entry.grid(row=3, column=2, columnspan=4, pady=5, sticky="ew", padx=2)
+        self.reverse_b_widgets.append(self.target_entry)
+        
+        fsr_docs_btn = ttk.Button(self, text="Predict_FSR_Docs")
+        fsr_docs_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.reverse_b_widgets.append(fsr_docs_btn)
+        
+        clear_btn = ttk.Button(self, text="Clear", command=self.clear_reverse_mode_b) 
+        clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=10, pady=5)
+        self.reverse_b_widgets.append(clear_btn)
+        
+        cancel_btn = ttk.Button(self, text="Back to default UI", command=self.show_default_mode)
+        cancel_btn.grid(row=5, column=0, columnspan=6, sticky="nsew", padx=10, pady=5)
+        self.reverse_b_widgets.append(cancel_btn)
+    
+    def destroy_widgets(self, widget_list):
+        for widget in widget_list:
+            widget.destroy()
+        widget_list.clear()
+    
+    def show_reverse_mode_a(self):
+        if self.current_mode == "reverse_a":
+            return
+    
+        # destroy default UI widgets
+        if hasattr(self, 'default_widgets') and self.default_widgets:
+            self.destroy_widgets(self.default_widgets)
+        
+        # Create fresh reverse mode A UI
+        self.create_reverse_mode_a_ui()
+        
+        self.current_mode = "reverse_a"
+    
+    def show_reverse_mode_b(self):
+        if self.current_mode == "reverse_b":
+            return
+
+        # Destroy default UI widgets
+        if hasattr(self, 'default_widgets') and self.default_widgets:
+            self.destroy_widgets(self.default_widgets)
+        
+        # Create fresh reverse mode B UI
+        self.create_reverse_mode_b_ui()
+        
+        self.current_mode = "reverse_b"
+    
+    def show_default_mode(self):
+        if self.current_mode == "default":
+            return
+        
+        # Destroy reverse mode A UI widgets
+        if hasattr(self, 'reverse_a_widgets') and self.reverse_a_widgets:
+            self.destroy_widgets(self.reverse_a_widgets)
+        
+        # Destroy reverse mode B UI widgets
+        if hasattr(self, 'reverse_b_widgets') and self.reverse_b_widgets:
+            self.destroy_widgets(self.reverse_b_widgets)
+        
+        self.create_default_ui()
+        
+        self.current_mode = "default"
     
     def predict_fsr(self):
         try:
@@ -145,3 +304,13 @@ class FSRCalculatorFrame(ttk.LabelFrame):
         self.output_entry.delete(0, tk.END)
         self.output_entry.insert(0, "")
         self.output_entry.config(state="readonly")
+
+    def clear_reverse_mode_a(self):
+        self.students_entry.delete(0, tk.END)
+        self.phd_entry.delete(0, tk.END)
+        self.target_entry.delete(0, tk.END)
+    
+    def clear_reverse_mode_b(self):
+        self.faculty_entry.delete(0 ,tk.END)
+        self.phd_entry.delete(0, tk.END)
+        self.target_entry.delete(0, tk.END)
