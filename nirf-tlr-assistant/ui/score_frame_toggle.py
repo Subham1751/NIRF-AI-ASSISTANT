@@ -37,13 +37,38 @@ def create_toggle_function(score_table_frame, gemini_frame, calculator_frames, s
 
     score_visible = [False]  # Using list to allow modification in nested function
     
-    def get_score_from_frame(frame):
+    def get_score_from_frame(key, frame):
+        # Totals for specific TLR and RP scores
+        totals = {
+            'ss': 20,
+            'fsr': 30,
+            'fqe': 20,
+            'fru': 30,
+            # RP scores
+            'pu': 35,
+            'qp': 40,
+            'ipr': 15,
+            'fppp': 10,
+            # GO scores
+            'gph': 40,
+            'gui': 15,
+            'gms': 25,
+            'gphd': 20,
+            # OI scores
+            'rd': 30,
+            'wd': 30,
+            'escs': 20,
+            'pcs': 20,
+        }
         try:
             if frame and hasattr(frame, 'output_entry'):
                 score_text = frame.output_entry.get().strip()
                 # Try to convert to float to validate it's a number
                 score = float(score_text)
-                return f"{score:.2f}"
+                formatted = f"{score:.2f}"
+                if key in totals:
+                    return f"{formatted}/{totals[key]}"
+                return formatted
         except (ValueError, AttributeError):
             pass
         return "N/A"
@@ -51,7 +76,7 @@ def create_toggle_function(score_table_frame, gemini_frame, calculator_frames, s
     def update_scores():
         for key in score_labels.keys():
             if key in calculator_frames:
-                score_labels[key].config(text=get_score_from_frame(calculator_frames.get(key)))
+                score_labels[key].config(text=get_score_from_frame(key, calculator_frames.get(key)))
     
     def toggle_score_frame():
         if score_visible[0]:
