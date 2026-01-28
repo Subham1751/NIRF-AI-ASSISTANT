@@ -80,11 +80,11 @@ model.fit(X_train, y_train)
 # ---------------------------------------------------
 preds = model.predict(X_test)
 
-print("\n====== MODEL ACCURACY ======")
-print("R2 Score:", r2_score(y_test, preds))
-print("MSE:", mean_squared_error(y_test, preds))
+# print("\n====== MODEL ACCURACY ======")
+# print("R2 Score:", r2_score(y_test, preds))
+# print("MSE:", mean_squared_error(y_test, preds))
 rmse = np.sqrt(mean_squared_error(y_test, preds))
-print("RMSE:", rmse)
+# print("RMSE:", rmse)
 #print("RMSE:", mean_squared_error(y_test, preds, squared=False))
 
 # ---------------------------------------------------
@@ -92,9 +92,6 @@ print("RMSE:", rmse)
 # ---------------------------------------------------
 joblib.dump(model, "model/escs_model.pkl")
 joblib.dump(imputer, "model/escs_imputer.pkl")
-
-print("\nModel saved as escs_model.pkl")
-print("Imputer saved as escs_imputer.pkl")
 
 # ---------------------------------------------------
 # 10. USER INPUT PREDICTION FUNCTION

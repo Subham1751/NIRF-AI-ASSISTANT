@@ -1,0 +1,101 @@
+Rank,University_Name,State,Year,SS_Score,Predicted_SS_Score,NT_Total,NE_Total,NP_Total
+1,Indian Institute of Technology Madras,Tamil Nadu,2024,18.5,,7029,7817,2574
+2,Indian Institute of Technology Delhi,Delhi,2024,18.5,,8684,8296,3807
+3,Indian Institute of Technology Bombay,Maharashtra,2024,18.5,,6866,8531,3987
+4,Indian Institute of Technology Kanpur,Uttar Pradesh,2024,18.33,,6825,6123,2057
+5,Indian Institute of Technology Kharagpu,West Bengal,2024,19.76,,12130,11051,3676
+6,Indian Institute of Technology Roorkee,Uttarakhand,2024,17.66,,7449,6465,2764
+7,Indian Institute of Technology Guwahati,Assam,2024,18.32,,6114,5530,1994
+8,Indian Institute of Technology Hyderabad,Telangana,2024,12.41,,2883,2444,800
+9,National Institute of Technology Tiruchirappalli,Tamil Nadu,2024,17.5,,5507,5411,956
+10,Indian Institute of Technology (Banaras Hindu University) Varanasi,Uttar Pradesh,2024,16.28,,7817,6764,1045
+11,Vellore Institute of Technology,Tamil Nadu,2024,20,,41222,43299,2938
+12,Jadavpur University,West Bengal,2024,18.5,,6150,5764,1057
+13,S.R.M. Institute of Science and Technology,Tamil Nadu,2024,18.04,,25290,21219,1422
+14,Anna University,Tamil Nadu,2024,15.94,,13359,9926,1489
+15,Indian Institute of Technology (Indian School of Mines) Dhanbad,Jharkhand,2024,15.43,,6113,4826,1102
+16,Indian Institute of Technology Indore,Madhya Pradesh,2024,10.73,,2113,1713,610
+17,"National Institute of Technology Karnataka, Surathkal",Karnataka,2024,17.5,,4418,5553,1120
+18,Indian Institute of Technology Gandhinagar,Gujarat,2024,11.5,,1205,1121,562
+19,National Institute of Technology Rourkela,Odisha,2024,17.5,,5528,5439,924
+20,"Birla Institute of Technology and Science, Pilani",Rajasthan,2024,17.87,,13321,12440,707
+21,National Institute of Technology Warangal,Telangana,2024,16.5,,5723,5448,672
+22,Indian Institute of Technology Ropar,Punjab,2024,12.41,,2210,1897,871
+23,Amrita Vishwa Vidyapeetham,Tamil Nadu,2024,16.22,,14569,11936,917
+24,Jamia Millia Islamia,Delhi,2024,10.5,,1859,1743,335
+25,National Institute of Technology Calicut,Kerala,2024,12.53,,4942,4556,764
+26,Siksha `O` Anusandhan,Odisha,2024,18.23,,21607374,8957,815
+27,Delhi Technological University,Delhi,2024,16.47,,11589,10758,1368
+28,Indian Institute of Technology Jodhpu,Rajasthan,2024,12.53,,2528,2170,734
+29,Thapar Institute of Engineering and Technology (Deemed-to-be-university),Punjab,2024,18.23,,10983,9730,633
+30,Amity University,Uttar Pradesh,2024,16.47,,6164,5702,993
+31,Indian Institute of Technology Mandi,Himachal Pradesh,2024,9.79,,2151,1768,496
+32,Chandigarh University,Punjab,2024,17.95,,14462,13443,621
+33,Aligarh Muslim University,Uttar Pradesh,2024,11,,2342,2431,266
+34,Indian Institute of Technology Patna,Bihar,2024,12.02,,2510,2088,640
+35,Koneru Lakshmaiah Education Foundation University (K L College of Engineering),Andhra Pradesh,2024,17.47,,14679,13248,817
+36,Kalasalingam Academy of Research and Education,Tamil Nadu,2024,16.48,,6740,6276,513
+37,Kalinga Institute of Industrial Technology,Odisha,2024,20,,13840,13957,1257
+38,Shanmugha Arts Science Technology and Research Academy,Tamil Nadu,2024,16.32,,9170,8381,529
+39,Visvesvaraya National Institute of Technology Nagpur,Maharashtra,2024,13.94,,4596,3925,445
+40,National Institute of Technology Silchar,Assam,2024,14.35,,4264,3817,645
+41,Institute of Chemical Technology,Maharashtra,2024,10.37,,2392,2059,309
+42,UPES,Uttarakhand,2024,15.5,,5739,5389,364
+43,Malaviya National Institute of Technology,Rajasthan,2024,14.97,,4626,3974,829
+44,National Institute of Technology Durgapur,West Bengal,2024,14.09,,4435,3850,685
+45,National Institute of Technology Delhi,Delhi,2024,7.96,,993,902,103
+46,Sri Sivasubramaniya Nadar College of Engineering,Tamil Nadu,2024,13.05,,3838,3631,505
+47,International Institute of Information Technology Hyderabad,Telangana,2024,9.33,,1911,1741,168
+48,Birla Institute of Technology,Jharkhand,2024,13.49,,3860,3492,378
+49,"Indian Institute of Engineering Science and Technology, Shibpur",West Bengal,2024,12.26,,4059,2970,831
+50,Lovely Professional University,Punjab,2024,18,,18477,18154,839
+51,Indian Institute of Space Science and Technology,Kerala,2024,8.95,,1172,849,328
+52,Graphic Era University,Uttarakhand,2024,12.7,,4925,4603,264
+53,Saveetha Institute of Medical and Technical Sciences,Tamil Nadu,2024,13.18,,7032,5466,545
+54,Indian Institute of Technology Bhubaneswar,Odisha,2024,11.15,,2605,2198,399
+55,National Institute of Technology Patna,Bihar,2024,12.35,,3681,3097,1203
+56,Manipal Institute of Technology,Karnataka,2024,15.12,,10674,8968,314
+57,Netaji Subhas University of Technology (NSUT),Delhi,2024,15.04,,7923,7158,222
+58,Dr. B R Ambedkar National Institute of Technology Jalandha,Punjab,2024,14.1,,6119,4687,516
+59,Sardar Vallabhbhai National Institute of Technology,Gujarat,2024,12.96,,3635,4009,648
+60,Motilal Nehru National Institute of Technology,Uttar Pradesh,2024,16.01,,5698,5223,619
+61,Indian Institute of Technology Tirupat,Andhra Pradesh,2024,8.32,,1329,1019,149
+62,Indian Institute of Technology Jammu,Jammu and Kashmir,2024,7.98,,1286,933,245
+63,Defence Institute of Advanced Technology,Maharashtra,2024,4.86,,809,538,165
+64,"Manipal University, Jaipur",Rajasthan,2024,14.67,,8169,7111,318
+65,Indian Institute of Technology Palakkad,Kerala,2024,7.17,,1072,815,157
+66,Sathyabama Institute of Science and Technology,Tamil Nadu,2024,16.53,,13674,10894,582
+67,PSG College of Technology,Tamil Nadu,2024,14.62,,6919,5996,357
+68,National Institute of Technology Meghalaya,Meghalaya,2024,6.64,,965,671,250
+69,Visvesvaraya Technological University,Karnataka,2024,7.27,,1739,1471,245
+70,University of Hyderabad,Telangana,2024,4.9,,724,323,201
+71,National Institute of Technology Raipur,Chhattisgarh,2024,13.94,,5055,4388,510
+72,Maulana Azad National Institute of Technology,Madhya Pradesh,2024,15.01,,10214488,4695,404
+73,Indian Institute of Technology Bhilai,Chhattisgarh,2024,6.36,,852,698,108
+74,International Institute of Information Technology Bangalore,Karnataka,2024,8.43,,1073,1010,90
+75,M. S. Ramaiah Institute of Technology,Karnataka,2024,14.4,,5588,4783,366
+76,Sant Longowal Institute of Engineering and Technology,Punjab,2024,10,,1338,2109,140
+77,COEP Technological University,Maharashtra,2024,11.5,,3652,3668,278
+78,Banasthali Vidyapith,Rajasthan,2024,10.68,,3560,3037,243
+79,National Institute of Technology Srinagar,Jammu and Kashmir,2024,12.79,,3984,3493,368
+80,Rajiv Gandhi Institute of Petroleum Technology,Uttar Pradesh,2024,8,,4095,977,183
+81,National Institute of Technology Kurukshetra,Haryana,2024,14.63,,5692,5086,419
+82,National Institute of Technology Agartala,Tripura,2024,12.59,,4493,3770,346
+83,Sri Krishna College of Engineering and Technology,Tamil Nadu,2024,13.5,,5446,5101,173
+84,Madan Mohan Malaviya University of Technology,Uttar Pradesh,2024,13.22,,3565,3235,258
+85,Indraprastha Institute of Information Technolog,Delhi,2024,11.7,,2776,2542,316
+86,Vel Tech Rangarajan Dr. Sagunthala R & D Institute of Science and Technology,Tamil Nadu,2024,15.13,,10289,9371,472
+87,Indian Institute of Information Technology Allahabad,Uttar Pradesh,2024,10.54,,2232,2045,253
+88,Jawaharlal Nehru Technological University,Telangana,2024,14.5,,7411,7029,465
+89,Guru Gobind Singh Indraprastha University,Delhi,2024,11,,2199,2079,230
+90,AU College of Engineering (A),Andhra Pradesh,2024,11.49,,3610,3361,103
+91,"Vignan's Foundation for Science, Technology and Research",Andhra Pradesh,2024,14.65,,8389,6754,605
+92,Shoolini University of Biotechnology and Management Sciences,Himachal Pradesh,2024,9.04,,1073,894,102
+93,Christ University,Karnataka,2024,8.26,,3143,2381,138
+94,Chitkara University,Punjab,2024,15.47,,8205,7741,323
+95,"Jain University, Bangalore",Karnataka,2024,13.23,,6135,4738,233
+96,"C.V. Raman Global University, Odisha",Odisha,2024,15.38,,5588,5091,255
+97,National Institute of Technology Puducherry,Puducherry,2024,8.97,,1158,1003,185
+98,SR University,Telangana,2024,13.97,,4448,4140,252
+99,R.V. College of Engineering,Karnataka,2024,14,,5496,0,288
+100,Siddaganga Institute of Technology,Karnataka,2024,12.42,,4424,0,171

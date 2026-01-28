@@ -1,0 +1,101 @@
+,Rank,University_Name,State,Year,SS_Score,Predicted_SS_Score,NT_Total,NE_Total,NP_Total
+0,1,Indian Institute of Technology,Chennai,2025,18.5,18.304905251641426,6289,6453,1998
+1,2,Indian Institute of Technology,New Delhi,2025,16.45,17.96318223081459,8131,6897,3412
+2,3,Indian Institute of Technology,Mumbai,2025,18.5,18.538211685093856,7939,8826,3989
+3,4,Indian Institute of Technology,Kanpur,2025,18.18,18.341581843223043,6589,6432,2111
+4,5,Indian Institute of Technology,Kharagpur,2025,18.23,18.538211685093856,9523,9334,3409
+5,6,Indian Institute of Technology,Roorkee,2025,17.75,17.6795651131994,7260,6857,2824
+6,7,Indian Institute of Technology,Hyderabad,2025,12.49,12.329262462429893,2989,2818,876
+7,8,Indian Institute of Technology,Guwahati,2025,17.86,18.045706131227586,5684,5413,2320
+8,9,National Institute of Technology,Tiruchirapalli,2025,17.5,16.736691641538744,5172,5296,821
+9,10,Indian Institute of Technology (Banaras Hindu University),Varanasi,2025,17.62,17.122984037962368,7696,7195,1196
+10,11,Birla Institute of Technology & Science,Pilani,2025,19.0,17.590721299741485,11567,11607,852
+11,12,Indian Institute of Technology,Indore,2025,12.55,11.624944663361376,2092,1987,674
+12,13,National Institute of Technology,Rourkela,2025,17.5,16.736691641538744,5192,5332,940
+13,14,S.R.M Institute of Science & Technology,Chennai,2025,17.82,17.92494781990772,23494,21646,1494
+14,15,Indian Institute of Technology (Indian School of Mines),Dhanbad,2025,15.87,16.2800437992318,5771,5073,1372
+15,16,Vellore Institute of Technology,Vellore,2025,20.0,19.957245306439635,38973,44865,2912
+16,17,National Institute of Technology Karnataka,Surathkal,2025,17.5,15.683863951673962,4118,5501,887
+17,18,Jadavpur University,Kolkata,2025,18.25,17.442821504714658,5770,5663,1072
+18,19,Indian Institute of Technology,Patna,2025,12.48,12.07988411448817,2555,2407,742
+19,20,Anna University,Chennai,2025,17.86,16.574269221108114,12197,10458,1736
+20,21,National Institute of Technology Calicut,Kozhikode,2025,16.0,15.134008344416618,4540,4745,843
+21,22,Siksha `O` Anusandhan,Bhubaneswar,2025,19.0,16.583677209295118,9840,10085,769
+22,23,Amrita Vishwa Vidyapeetham,Coimbatore,2025,18.0,18.565937355174356,14534,14786,1110
+23,24,Jamia Milia Islamia,New Delhi,2025,10.5,10.225462106601993,1748,1750,367
+24,25,Indian Institute of Technology,Gandhinagar,2025,11.5,10.9316858389334,1450,1495,595
+25,26,Indian Institute of Technology,Mandi,2025,12.45,11.6734954334871,2053,1928,720
+26,27,Indian Institute of Technology,Jodhpur,2025,12.5,12.07988411448817,2536,2395,920
+27,28,National Institute of Technology,Warangal,2025,16.16,16.254039668941044,5228,5097,833
+28,29,Thapar University,Patiala,2025,18.0,14.87830557729379,10471,10484,495
+29,30,Delhi Technological University,New Delhi,2025,19.0,17.955734661751443,10901,10938,1309
+30,31,Chandigarh University,Punjab,2025,17.88,17.25610929574303,14247,14130,504
+31,32,Indian Institute of Technology Ropar,Rupnagar,2025,11.7,12.049801748917034,2201,1884,973
+32,33,Kalasingham Academy of Research and Education,Krishnan Koil,2025,16.49,15.668740820093609,6798,6792,517
+33,34,Aligarh Muslim University,Aligarh,2025,11.0,10.400000987632913,2134,2449,233
+34,35,Koneru Lakshmaiah Education Foundation University (K L College of Engineering),Vaddeswaram,2025,18.65,18.382591847496055,13584,13271,941
+35,36,Kalinga Institute of Industrial Technology,Bhubaneswar,2025,20.0,19.58981617485695,13624,13886,1306
+36,37,Amity University,Gautam Budh Nagar,2025,13.6,16.58097555556505,7119,5589,1003
+37,38,International Institute of Information Technology Hyderabad,Hyderabad,2025,9.08,8.181367548797867,1716,1621,168
+38,39,Indian Institute of Technology Bhubaneswar,Bhubaneshwar,2025,11.05,11.501890708774624,2551,2281,450
+39,40,Shanmugha Arts Science Technology & Research Academy,Thanjavur,2025,17.5,17.19398910511378,9173,9369,764
+40,41,Institute of Chemical Technology,Mumbai,2025,11.5,11.979202354522949,2214,2090,389
+41,42,Malaviya National Institute of Technology,Jaipur,2025,15.39,14.519890978723096,4180,3966,819
+42,43,UPES ,Dehradun,2025,15.5,15.362038920983581,6460,6579,259
+43,44,"Visvesvaraya National Institute of Technology, Nagpur",Nagpur,2025,13.31,13.530028782202907,4288,3685,538
+44,45,Saveetha Institute of Medical and Technical Sciences,Chennai,2025,16.02,17.000895608334897,7926,7646,645
+45,46,Symbiosis International,Pune,2025,10.8,11.424353755863716,2562,2505,270
+46,47,Sri Sivasubramaniya Nadar College of Engineering,Kalavakkam,2025,12.5,12.610287793625892,3642,3757,480
+47,48,Lovely Professional University,Phagwara,2025,18.0,18.108004798083343,18304,18880,660
+48,49,National Institute of Technology Durgapur,Durgapur,2025,14.07,14.24527355448067,4180,3855,614
+49,50,National Institute of Technology Silchar,Silchar,2025,14.42,13.15617175136784,4036,3841,646
+50,51,Birla Institute of Technology,Ranchi,2025,18.5,12.681809426644406,3740,3723,434
+51,52,Graphic Era University,Dehradun,2025,13.45,13.487689964305748,4860,4758,274
+52,53,National Institute of Technology Patna,Patna,2025,12.3,12.362173159981918,3527,3125,1342
+53,54,"Indian Institute of Engineering Science and Technology, Shibpur",Howrah,2025,12.27,12.441074277529761,3806,2999,747
+54,55,"Dr. B R Ambedkar National Institute of Technology, Jalandhar",Jalandhar,2025,14.0,13.887355443012279,5463,4856,478
+55,56,Indian Institute of Technology Jammu,Jammu,2025,7.95,8.861692860167462,1349,1071,213
+56,57,"Indian Institute of Technology, Tirupati",Tirupati,2025,8.71,8.734913048405451,1213,1086,175
+57,58,Manipal University,Jaipur,2025,14.84,15.56013910613097,9324,8867,395
+58,59,Manipal Institute of Technology,Manipal,2025,15.89,15.488617473112456,10610,9116,472
+59,60,Madan Mohan Malaviya University of Technology,Gorakhpur,2025,13.5,12.213588244632007,3276,3276,316
+60,61,Indian Institute of Space Science and Technology,Thiruvananthpuram,2025,8.65,9.796285031788345,1178,887,365
+61,62,Motilal Nehru National Institute of Technology,Prayagraj,2025,15.79,15.51359966815341,5516,5227,605
+62,63,Indraprastha Institute of Information Technology,New Delhi,2025,12.0,11.55672203982124,2400,2691,342
+63,64,Indian Institute of Technology Palakkad,Palakkad,2025,7.23,7.435493739929695,994,866,205
+64,65,National Institute of Technology Delhi,Delhi,2025,8.5,9.087617189878264,1226,1262,71
+65,66,Sardar Vallabhbhai National Institute of Technology,Surat,2025,13.2,13.861876101550225,4924,4187,587
+66,67,PSG College of Technology,Coimbatore,2025,15.19,15.268829258651188,6379,6232,346
+67,68,Sathyabama Institute of Science and Technology,Chennai,2025,17.99,17.721141411350683,11520,11511,808
+68,69,International Institute of Information Technology Bangalore,Bengaluru,2025,8.19,8.686344623984043,1080,1036,94
+69,70,Netaji Subhas University of Technology (NSUT),Delhi,2025,15.48,14.986800313779606,8111,7498,296
+70,71,Banasthali Vidyapith,Banasthali,2025,10.89,12.83631644249374,4302,3187,231
+71,72,Indian Institute of Technology Bhilai,Durg,2025,6.22,6.891968136788098,959,835,86
+72,73,National Institute of Technology Srinagar,Srinagar,2025,13.01,12.548573012277767,3975,3791,360
+73,74,University of Hyderabad,Hyderabad,2025,4.61,5.0823451597423865,490,284,192
+74,75,M. S. Ramaiah Institute of Technology,Bengaluru,2025,14.5,14.237505034188878,5445,5040,357
+75,76,Christ University,Bengaluru,2025,10.15,9.831574497567992,3048,2802,132
+76,77,Indian Institute of Technology Dharwad,Dharwad,2025,8.04,8.251106202596194,1132,911,152
+77,78,Rajiv Gandhi Institute of Petroleum Technology,Amethi,2025,9.5,8.861692860167462,1284,1284,230
+78,79,Sant Longowal Institute of Engineering & Technology,Longowal,2025,10.0,9.280985038278292,1168,2012,141
+79,80,"Vignan's Foundation for Science, Technology and Research",Guntur,2025,17.3,17.24141289548772,8382,8260,655
+80,81,Maulana Azad National Institute of Technology,Bhopal,2025,14.72,13.432159006618393,5330,4626,475
+81,82,"National Institute of Technology, Jamshedpur",Jamshedpur,2025,12.14,12.568020449951229,3756,3269,278
+82,83,National Institute of Technology Meghalaya,Shillong,2025,6.44,7.788393731678044,915,677,268
+83,84,"Jain university,Bangalore",Bengaluru,2025,14.05,13.29091277135168,5457,4870,243
+84,85,National Institute of Technology Kurukshetra,Kurukshatra,2025,15.19,14.656430968506037,5608,5064,422
+85,86,"National Institute of Technology, Raipur",Raipur,2025,13.82,14.24527355448067,4874,4395,658
+86,87,Vel Tech Rangarajan Dr. Sagunthala R & D Institute of Science and Technology,Chennai,2025,15.5,15.844089487156587,9600,9678,586
+87,88,AU College of Engineering (A),Visakhapatnam,2025,11.5,9.972887703776424,3148,3148,138
+88,89,Chitkara University,Rajpura,2025,13.34,15.227317600932427,9985,8385,303
+89,90,COEP Technological University,Pune,2025,14.0,12.62625171897854,3682,4040,288
+90,91,SR University,Warangal,2025,16.5,14.299219815537002,5022,5049,455
+91,92,Defence Institute of Advanced Technology,Pune,2025,3.78,6.378248864421122,944,437,166
+92,93,Panjab University,Chandigarh,2025,11.22,10.22342802627507,3435,3015,153
+93,94,Jawaharlal Nehru Technological University,Hyderabad,2025,15.5,15.11916859773713,7362,7362,317
+94,95,"C.V. Raman Global University, Odisha",Bhubaneswar,2025,16.5,14.952158728460136,5124,5242,316
+95,96,Atal Bihari Vajpayee Indian Institute of Information Technology and Management,Gwalior,2025,8.02,8.11037057656838,1069,1001,105
+96,97,National Institute of Technology Hamirpur,Hamirpur,2025,13.0,13.331956069160926,4487,4113,272
+97,98,Pandit Deendayal Energy University,GandhiNagar,2025,15.5,14.819320537171363,5268,5417,216
+98,99,National Institute of Technology Puducherry,Karaikal,2025,8.68,9.77747633317653,1130,1006,257
+99,100,Sri Krishna College of Engineering and Technology,Coimbatore,2025,14.0,14.721466903067856,5523,5679,106
